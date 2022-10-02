@@ -1,0 +1,42 @@
+<html>
+
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"> </script>
+
+    <title>Classification on CIFAR</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+
+  <body>
+
+    <h1>Please upload a picture</h1>
+    <h4>The model has been trained on the following categories: airplane,
+      automobile, bird, cat, deer, dog, frog, horse, ship, truck</h4>
+
+    <div class="drop-zone">
+      <span class="drop-zone__prompt">Drop file here or click to upload</span>
+      <input type="file" accept="image/*" name="myFile" id="img1" class="drop-zone__input">
+    </div>
+
+    <br>
+
+    <img id="image" src="" />
+    <img id="output" width="32" height="32"/>
+
+    <div>
+      <button type="button" onclick="predictModel()">Predict</button>
+    </div>
+
+    <h2>Result of the prediction:</h2>
+    <canvas id="result_image"></canvas>
+    <h3 id="result">Prediction</h3>
+
+    <script src="script.js"></script>
+
+  </body>
+
+</html>
